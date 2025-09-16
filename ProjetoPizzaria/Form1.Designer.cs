@@ -32,24 +32,24 @@
             this.lblValorPizza = new System.Windows.Forms.Label();
             this.lblValorOpcionais = new System.Windows.Forms.Label();
             this.lblValorPagar = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblPesquisar = new System.Windows.Forms.Label();
             this.txtValorPizza = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.txtValorPagar = new System.Windows.Forms.TextBox();
             this.txtValorOpcionais = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.chkBorda = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.chkCebola = new System.Windows.Forms.CheckBox();
+            this.chkCatupiry = new System.Windows.Forms.CheckBox();
+            this.chkTempero = new System.Windows.Forms.CheckBox();
             this.grpOpcionais = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnNovo = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnCalcular = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.dgvPedido = new System.Windows.Forms.DataGridView();
             this.grpOpcionais.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbTamanhoPizza
@@ -89,14 +89,14 @@
             this.lblValorPagar.TabIndex = 3;
             this.lblValorPagar.Text = "VALOR A PAGAR";
             // 
-            // label4
+            // lblPesquisar
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(288, 220);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "label4";
+            this.lblPesquisar.AutoSize = true;
+            this.lblPesquisar.Location = new System.Drawing.Point(288, 220);
+            this.lblPesquisar.Name = "lblPesquisar";
+            this.lblPesquisar.Size = new System.Drawing.Size(69, 13);
+            this.lblPesquisar.TabIndex = 4;
+            this.lblPesquisar.Text = "PESQUISAR";
             // 
             // txtValorPizza
             // 
@@ -105,12 +105,12 @@
             this.txtValorPizza.Size = new System.Drawing.Size(100, 20);
             this.txtValorPizza.TabIndex = 5;
             // 
-            // textBox2
+            // txtPesquisar
             // 
-            this.textBox2.Location = new System.Drawing.Point(450, 217);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 6;
+            this.txtPesquisar.Location = new System.Drawing.Point(450, 217);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(100, 20);
+            this.txtPesquisar.TabIndex = 6;
             // 
             // txtValorPagar
             // 
@@ -143,110 +143,111 @@
             this.chkBorda.Text = "Borda Recheada";
             this.chkBorda.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // chkCebola
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(6, 54);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(80, 17);
-            this.checkBox2.TabIndex = 12;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chkCebola.AutoSize = true;
+            this.chkCebola.Location = new System.Drawing.Point(6, 54);
+            this.chkCebola.Name = "chkCebola";
+            this.chkCebola.Size = new System.Drawing.Size(111, 17);
+            this.chkCebola.TabIndex = 12;
+            this.chkCebola.Text = "Cebola sem choro";
+            this.chkCebola.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // chkCatupiry
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(6, 77);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(80, 17);
-            this.checkBox3.TabIndex = 13;
-            this.checkBox3.Text = "checkBox3";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.chkCatupiry.AutoSize = true;
+            this.chkCatupiry.Location = new System.Drawing.Point(6, 77);
+            this.chkCatupiry.Name = "chkCatupiry";
+            this.chkCatupiry.Size = new System.Drawing.Size(102, 17);
+            this.chkCatupiry.TabIndex = 13;
+            this.chkCatupiry.Text = "Catupiry Original";
+            this.chkCatupiry.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // chkTempero
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(6, 100);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(80, 17);
-            this.checkBox4.TabIndex = 14;
-            this.checkBox4.Text = "checkBox4";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.chkTempero.AutoSize = true;
+            this.chkTempero.Location = new System.Drawing.Point(6, 100);
+            this.chkTempero.Name = "chkTempero";
+            this.chkTempero.Size = new System.Drawing.Size(103, 17);
+            this.chkTempero.TabIndex = 14;
+            this.chkTempero.Text = "Tempero do City";
+            this.chkTempero.UseVisualStyleBackColor = true;
             // 
             // grpOpcionais
             // 
-            this.grpOpcionais.Controls.Add(this.checkBox3);
-            this.grpOpcionais.Controls.Add(this.checkBox4);
+            this.grpOpcionais.Controls.Add(this.chkCatupiry);
+            this.grpOpcionais.Controls.Add(this.chkTempero);
             this.grpOpcionais.Controls.Add(this.chkBorda);
-            this.grpOpcionais.Controls.Add(this.checkBox2);
+            this.grpOpcionais.Controls.Add(this.chkCebola);
             this.grpOpcionais.Location = new System.Drawing.Point(57, 140);
             this.grpOpcionais.Name = "grpOpcionais";
-            this.grpOpcionais.Size = new System.Drawing.Size(102, 143);
+            this.grpOpcionais.Size = new System.Drawing.Size(127, 143);
             this.grpOpcionais.TabIndex = 15;
             this.grpOpcionais.TabStop = false;
             this.grpOpcionais.Text = "ESCOLHA OPCIONAIS";
             // 
-            // button1
+            // btnNovo
             // 
-            this.button1.Location = new System.Drawing.Point(175, 588);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnNovo.Location = new System.Drawing.Point(175, 588);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(75, 23);
+            this.btnNovo.TabIndex = 16;
+            this.btnNovo.Text = "NOVO";
+            this.btnNovo.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnSalvar
             // 
-            this.button2.Location = new System.Drawing.Point(395, 588);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSalvar.Location = new System.Drawing.Point(395, 588);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.TabIndex = 17;
+            this.btnSalvar.Text = "SALVAR";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnCalcular
             // 
-            this.button3.Location = new System.Drawing.Point(619, 588);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnCalcular.Location = new System.Drawing.Point(619, 588);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(75, 23);
+            this.btnCalcular.TabIndex = 18;
+            this.btnCalcular.Text = "CALCULAR";
+            this.btnCalcular.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnSair
             // 
-            this.button4.Location = new System.Drawing.Point(780, 588);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 19;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnSair.Location = new System.Drawing.Point(780, 588);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(75, 23);
+            this.btnSair.TabIndex = 19;
+            this.btnSair.Text = "SAIR";
+            this.btnSair.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvPedido
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(38, 289);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(900, 293);
-            this.dataGridView1.TabIndex = 20;
+            this.dgvPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPedido.Location = new System.Drawing.Point(38, 289);
+            this.dgvPedido.Name = "dgvPedido";
+            this.dgvPedido.Size = new System.Drawing.Size(900, 293);
+            this.dgvPedido.TabIndex = 20;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1068, 649);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dgvPedido);
+            this.Controls.Add(this.btnSair);
+            this.Controls.Add(this.btnCalcular);
+            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.grpOpcionais);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.txtValorOpcionais);
             this.Controls.Add(this.txtValorPagar);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtPesquisar);
             this.Controls.Add(this.txtValorPizza);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblPesquisar);
             this.Controls.Add(this.lblValorPagar);
             this.Controls.Add(this.lblValorOpcionais);
             this.Controls.Add(this.lblValorPizza);
@@ -255,7 +256,7 @@
             this.Text = "Form1";
             this.grpOpcionais.ResumeLayout(false);
             this.grpOpcionais.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,22 +268,22 @@
         private System.Windows.Forms.Label lblValorPizza;
         private System.Windows.Forms.Label lblValorOpcionais;
         private System.Windows.Forms.Label lblValorPagar;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblPesquisar;
         private System.Windows.Forms.TextBox txtValorPizza;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPesquisar;
         private System.Windows.Forms.TextBox txtValorPagar;
         private System.Windows.Forms.TextBox txtValorOpcionais;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.CheckBox chkBorda;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox chkCebola;
+        private System.Windows.Forms.CheckBox chkCatupiry;
+        private System.Windows.Forms.CheckBox chkTempero;
         private System.Windows.Forms.GroupBox grpOpcionais;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnNovo;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnCalcular;
+        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.DataGridView dgvPedido;
     }
 }
 

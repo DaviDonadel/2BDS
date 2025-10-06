@@ -31,5 +31,57 @@ namespace ProjetoPizzaria
         {
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            cmbTamanhoPizza.Items.Add("Pequena - R$ 20,00");
+            cmbTamanhoPizza.Items.Add("Média - R$ 30,00");
+            cmbTamanhoPizza.Items.Add("Grande - R$ 50,00");
+
+        }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            //declarando variaveis
+            double valorPizza = 0, valorOpcoes = 0, valorTotal = 0;
+            if (cmbTamanhoPizza.SelectedIndex == 0)
+            {
+                valorPizza = 20;
+            }
+            else if (cmbTamanhoPizza.SelectedIndex == 1)
+            {
+                valorPizza = 30;
+            }
+            else if (cmbTamanhoPizza.SelectedIndex == 2)
+            {
+                valorPizza = 50;
+            }
+            if (chkBorda.Checked == true)
+            {
+                valorOpcoes = valorOpcoes + 5;
+            }
+            if (chkTempero.Checked == true)
+            {
+                valorOpcoes = valorOpcoes + 6;
+            }
+            if (chkCebola.Checked == true)
+            {
+                valorOpcoes = valorOpcoes + 3;
+            }
+            if (chkCatupiry.Checked == true)
+            {
+                valorOpcoes = valorOpcoes + 4;
+            }
+            else
+            {
+
+            }
+            valorTotal = valorPizza + valorOpcoes;
+            txtValorPizza.Text = Convert.ToString(valorPizza);
+            txtValorOpcionais.Text = Convert.ToString(valorOpcoes);
+            txtValorPagar.Text = Convert.ToString(valorTotal);
+        }
+
     }
 }
+

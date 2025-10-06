@@ -213,6 +213,7 @@
             this.btnCalcular.TabIndex = 18;
             this.btnCalcular.Text = "CALCULAR";
             this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // btnSair
             // 
@@ -254,6 +255,7 @@
             this.Controls.Add(this.cmbTamanhoPizza);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.grpOpcionais.ResumeLayout(false);
             this.grpOpcionais.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).EndInit();

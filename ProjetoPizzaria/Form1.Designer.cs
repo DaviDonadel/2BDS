@@ -37,7 +37,7 @@
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.txtValorPagar = new System.Windows.Forms.TextBox();
             this.txtValorOpcionais = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.chkBorda = new System.Windows.Forms.CheckBox();
             this.chkCebola = new System.Windows.Forms.CheckBox();
             this.chkCatupiry = new System.Windows.Forms.CheckBox();
@@ -111,6 +111,7 @@
             this.txtPesquisar.Name = "txtPesquisar";
             this.txtPesquisar.Size = new System.Drawing.Size(100, 20);
             this.txtPesquisar.TabIndex = 6;
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged_1);
             // 
             // txtValorPagar
             // 
@@ -126,12 +127,12 @@
             this.txtValorOpcionais.Size = new System.Drawing.Size(100, 20);
             this.txtValorOpcionais.TabIndex = 8;
             // 
-            // textBox5
+            // txtCodigo
             // 
-            this.textBox5.Location = new System.Drawing.Point(38, 12);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(48, 20);
-            this.textBox5.TabIndex = 9;
+            this.txtCodigo.Location = new System.Drawing.Point(38, 12);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(48, 20);
+            this.txtCodigo.TabIndex = 9;
             // 
             // chkBorda
             // 
@@ -231,6 +232,7 @@
             this.dgvPedido.Name = "dgvPedido";
             this.dgvPedido.Size = new System.Drawing.Size(900, 293);
             this.dgvPedido.TabIndex = 20;
+            this.dgvPedido.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvPedido_MouseDoubleClick);
             // 
             // Form1
             // 
@@ -243,7 +245,7 @@
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.grpOpcionais);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.txtValorOpcionais);
             this.Controls.Add(this.txtValorPagar);
             this.Controls.Add(this.txtPesquisar);
@@ -275,7 +277,7 @@
         private System.Windows.Forms.TextBox txtPesquisar;
         private System.Windows.Forms.TextBox txtValorPagar;
         private System.Windows.Forms.TextBox txtValorOpcionais;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.CheckBox chkBorda;
         private System.Windows.Forms.CheckBox chkCebola;
         private System.Windows.Forms.CheckBox chkCatupiry;
